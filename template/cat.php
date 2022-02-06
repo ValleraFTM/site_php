@@ -1,13 +1,14 @@
 <?php
 
-require_once "core/function_db.php";
-// main page templated from
+// category page templete
 
-echo "<pre>";
-$query = "SELECT * FROM info";
-$result = select($query);
-//print_r ($result);
 
+$out = '';
+$out .= "<div>";
+$out .= "<h2>Категория " . $cat[0]['title'] . "</h2>";
+$out .= "<p>" . $cat[0]['description']. "</p>";
+$out .= '</div>';
+echo $out;
 for ($i = 0; $i < count($result); $i++) {
     $out = '';
     $out .= "<div>";
@@ -18,4 +19,3 @@ for ($i = 0; $i < count($result); $i++) {
     $out .= '</div>';
     echo $out;
 }
-echo "</pre>";
