@@ -7,7 +7,7 @@
 <body>
 <p>the material for the site is taken from bambubatu.com for educational purposes,
      and completely belongs to them, I'm just learning how to make websites and 
-     will remove all articles on the first demand. my telegram @ValleraFTM
+     will remove all articles on the first demand. my telegram <a href="https://t.me/ValleraFTM">Vallera</a>
 <?php
 require_once 'config/db.php';
 require_once 'core/function_db.php';
@@ -35,6 +35,13 @@ switch ($route) {
             $result = getCatArticle($cat[0]['id']);
             require_once 'template/cat.php';
             break;
+    case ($route[0] =='register'):
+       require_once 'template/register.php';
+        break;
+    case ($route[0] =='login'):
+        require_once 'template/login.php';
+        break; 
+     
 
     default:
         require_once 'template/404.php';
